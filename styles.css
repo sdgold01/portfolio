@@ -621,3 +621,76 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
+.projects .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.project-category {
+    margin-bottom: 50px;
+}
+
+.project-category .subtitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-content .card {
+    width: 300px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-content .card:hover {
+    transform: translateY(-10px);
+}
+
+.project-content .card .box i {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.project-content .card .text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.project-content .card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.project-content .card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #007BFF;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.project-content .card a:hover {
+    background: #0056b3;
+}
+
