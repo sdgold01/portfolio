@@ -822,3 +822,12 @@ footer span a:hover{
     display: inline-block;
     margin-top: 10px;
 }
+h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.line.soft {
+    background: #f39c12; /* different color for soft skills */
+}
