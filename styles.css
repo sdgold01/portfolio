@@ -259,6 +259,21 @@ section .title::after{
 
 /* services section styling */
 .services, .teams{
+    color: #fff;
+    background: #111;
+}
+.services .title::before,
+.teams .title::before{
+    background: #fff;
+}
+.services .title::after,
+.teams .title::after{
+    background: #111;
+    content: "what i provide";
+}
+
+/* services section styling */
+.services, .teams{
     color:#fff;
     background: #111;
 }
@@ -272,7 +287,7 @@ section .title::after{
     content: "what i provide";
 }
 .services .serv-content .card{
-    width: calc(33% - 20px);
+    width: calc(30% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -302,6 +317,7 @@ section .title::after{
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
 
 /* skills section styling */
 
@@ -642,19 +658,21 @@ footer span a:hover{
 
 .project-content {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
 }
 
-.project-content .card {
+/* .project-content .card {
     width: 300px;
     background: #fff;
     border-radius: 6px;
     padding: 25px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-}
+} */
 
 .project-content .card:hover {
     transform: translateY(-10px);
@@ -682,15 +700,125 @@ footer span a:hover{
 .project-content .card a {
     display: inline-block;
     margin-top: 10px;
-    text-decoration: none;
+    background: #e60023;
     color: #fff;
-    background: #007BFF;
-    padding: 8px 15px;
+    padding: 8px 16px;
     border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
     transition: background 0.3s ease;
 }
 
 .project-content .card a:hover {
-    background: #0056b3;
+    background: #b8001c;
 }
 
+.project-content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.project-content::-webkit-scrollbar-thumb {
+    background: var(--theme-color, #e60023);
+    border-radius: 10px;
+}
+.project-content .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px; 
+}
+
+.certifications .cert-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.certifications .card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    transition: 0.3s ease;
+}
+
+.certifications .card:hover {
+    transform: translateY(-8px);
+}
+
+.certifications .box i {
+    font-size: 50px;
+    color: var(--theme-color, #e60023); 
+    margin-bottom: 10px;
+}
+
+.certifications .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.certifications .card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--theme-color, #e60023);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.certifications .card a:hover {
+    background: #b8001c;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e60023; /* Use the red color from your theme */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Remove hover effect */
+.button:hover {
+    background-color: #e60023; /* Keep the same background color */
+    color: #fff;
+}
+
+/* Card Styling */
+.card {
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .box {
+    padding: 20px;
+}
+
+.card .box .text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card .box p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.card .box a {
+    display: inline-block;
+    margin-top: 10px;
+}

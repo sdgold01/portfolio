@@ -71,3 +71,38 @@ $(document).ready(function(){
         }
     });
 });
+
+
+    // Initialize EmailJS
+    emailjs.init('TNzxM492tQckhLjBI');
+
+    // Function to send email
+    function sendEmail(event) {
+        event.preventDefault();// Prevent the default form submission
+
+        // Get the form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        // Create the email template
+        const templateParams = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        };
+
+        // Send the email using EmailJS
+        emailjs.send('service_5ttous6', 'template_hwsl1oa', templateParams)
+            .then(function(response) {
+                console.log('Success!', response);
+                alert("Your message has been sent successfully!");
+                document.getElementById("contact-form").reset(); // Reset the form
+            }, function(error) {
+                console.log('Failed...', error);
+                alert("Oops! Something went wrong. Please try again later.");
+            });
+    }
+

@@ -1,0 +1,23 @@
+{
+  "name": "responsive-portfolio-website",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdgold01/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdgold01/portfolio/issues"
+  },
+  "homepage": "https://github.com/sdgold01/portfolio#readme",
+  "description": "",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
